@@ -6,7 +6,7 @@ from keras.layers import GRU
 from keras.layers import Dropout
 from keras import optimizers
 """
-    If network is overfitting => decrease batch size; the vice-versa for underfitting
+    If network is overfitting => decrease batch size; the contrary is true for underfitting
 """
 def lstm_model(inputs, output_size, neurons, optimizer, loss, activ_func="linear",
                 dropout=0.25): 

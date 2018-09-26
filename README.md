@@ -1,7 +1,7 @@
 # Predicting Time Series using Neural Networks
 <div float="left">
-  <img src="https://www.tensorflow.org/images/tf_logo_transp.png" height="100" >
-  <img src="https://s3.amazonaws.com/keras.io/img/keras-logo-2018-large-1200.png" height="100">
+  <img src="https://www.tensorflow.org/images/tf_logo_transp.png" height="50" >
+  <img src="https://s3.amazonaws.com/keras.io/img/keras-logo-2018-large-1200.png" height="50">
 </div>
 <div float="right">
 
@@ -24,7 +24,7 @@ To run the Prediction Models the following should be installed:
 6. Matplotlib=2.2.3
 7. sklearn=0.19.2
 
-### Work on Progress
+### Work in Progress
 #### Three models that will be implemented are:
 1. LSTM
 2. GRU

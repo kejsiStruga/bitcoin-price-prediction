@@ -1,0 +1,37 @@
+digraph G {
+	rankdir = LR;
+	splines=false;
+	edge[style=invis];
+	ranksep= 1.4;
+	{
+	node [shape=circle];
+	x [label=<<I>x</I>>]; 
+	}
+
+	{
+	    node [shape=circle];
+	    h [label=<<I>h</I>>];
+	}
+
+	{
+	    node [shape=circle];
+	    o [label=<<I>o</I>>];
+	}
+	l0 [shape=plaintext, label="Shtresa e inputit"];
+	l0->x;
+	{rank=same; l0;x};
+
+	l1 [shape=plaintext, label="Shtresa e fshehur"];
+	l1 -> h;
+	{rank=same; l1;h};
+
+	l2 [shape=plaintext, label="Shtresa e outputit"];
+	l2 -> o;
+	{rank=same; l2;o}
+
+	edge[style=solid, tailport=e, headport=w];
+	{h} -> {h}[label=<<I>W</I>>];
+	{x} -> {h};
+	{h} -> {o};
+}
+

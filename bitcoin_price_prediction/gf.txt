@@ -1,0 +1,73 @@
+digraph G {
+    rankdir = LR;
+    splines=false;
+    edge[style=invis];
+    ranksep= 1.4;
+    {
+    node [shape=circle, color=yellow, style=filled, fillcolor=yellow];
+    x0 [label=<x<sub>0</sub>>]; 
+    a02 [label=<a<sub>0</sub><sup>(2)</sup>>]; 
+    a03 [label=<a<sub>0</sub><sup>(3)</sup>>];
+    }
+    {
+    node [shape=circle, color=chartreuse, style=filled, fillcolor=chartreuse];
+    x1 [label=<x<sub>1</sub>>];
+    x2 [label=<x<sub>2</sub>>]; 
+    x3 [label=<x<sub>3</sub>>];
+}
+{
+    node [shape=circle, color=dodgerblue, style=filled, fillcolor=dodgerblue];
+    a12 [label=<a<sub>1</sub><sup>(2)</sup>>];
+    a22 [label=<a<sub>2</sub><sup>(2)</sup>>];
+    a32 [label=<a<sub>3</sub><sup>(2)</sup>>];
+    a42 [label=<a<sub>4</sub><sup>(2)</sup>>];
+    a52 [label=<a<sub>5</sub><sup>(2)</sup>>];
+    a13 [label=<a<sub>1</sub><sup>(3)</sup>>];
+    a23 [label=<a<sub>2</sub><sup>(3)</sup>>];
+    a33 [label=<a<sub>3</sub><sup>(3)</sup>>];
+    a43 [label=<a<sub>4</sub><sup>(3)</sup>>];
+    a53 [label=<a<sub>5</sub><sup>(3)</sup>>];
+}
+{
+    node [shape=circle, color=coral1, style=filled, fillcolor=coral1];
+    O1 [label=<a<sub>1</sub><sup>(4)</sup>>];
+    O2 [label=<a<sub>2</sub><sup>(4)</sup>>]; 
+    O3 [label=<a<sub>3</sub><sup>(4)</sup>>]; 
+    O4 [label=<a<sub>4</sub><sup>(4)</sup>>];
+}
+    {
+        rank=same;
+        x0->x1->x2->x3;
+    }
+    {
+        rank=same;
+        a02->a12->a22->a32->a42->a52;
+    }
+    {
+        rank=same;
+        a03->a13->a23->a33->a43->a53;
+    }
+    {
+        rank=same;
+        O1->O2->O3->O4;
+    }
+    a02->a03;  
+    l0 [shape=plaintext, label="layer 1 (input layer)"];
+    l0->x0;
+    {rank=same; l0;x0};
+    l1 [shape=plaintext, label="layer 2 (hidden layer)"];
+    l1->a02;
+    {rank=same; l1;a02};
+    l2 [shape=plaintext, label="layer 3 (hidden layer)"];
+    l2->a03;
+    {rank=same; l2;a03};
+    l3 [shape=plaintext, label="layer 4 (output layer)"];
+    l3->O1;
+    {rank=same; l3;O1};
+    edge[style=solid, tailport=e, headport=w];
+    {x0} -> {x0};
+    {x0; x1; x2; x3} -> {a12;a22;a32;a42;a52};
+    {a02;a12;a22;a32;a42;a52} -> {a13;a23;a33;a43;a53};
+    {a03;a13;a23;a33;a43;a53} -> {O1,O2,O3,O4};
+}
+

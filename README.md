@@ -10,7 +10,8 @@
 ## 
 
 ### Introduction
-The aim of this project, regardless of the speculative bubbles in Bitcoin price, is to give a hint on the future closing price values. 
+Regardless of the speculative bubbles in Bitcoin price, this project aims to give a hint on the future closing price values of this cryptocurrency. 
+Considering several Bitcoin indicators as per my analysis, sentiment data along with blockchain, historical prices and financial indices data are gathered to predict the closing price. 
 
 
 ### Environment Setup

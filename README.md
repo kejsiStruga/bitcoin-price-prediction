@@ -7,7 +7,7 @@
 
 </div>
 
-## 
+###### &#x1F534; _Attn: For a curated list of Bitcoin learning materials, please follow this [link](https://paperpublisher.herokuapp.com/papers/show/5b55e79079f094001423ef83)_
 
 ### Introduction
 Regardless of the speculative bubbles in Bitcoin price, this project aims to give a hint on the future closing price values of this cryptocurrency. 
@@ -30,3 +30,4 @@ To run the Prediction Models the following should be installed:
 1. LSTM
 2. GRU
 3. XGBoot
+

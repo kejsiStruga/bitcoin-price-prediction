@@ -25,9 +25,5 @@ To run the Prediction Models the following should be installed:
 6. Matplotlib=2.2.3
 7. sklearn=0.19.2
 
-### Work in Progress
-#### Three models that will be implemented are:
-1. LSTM
-2. GRU
-3. XGBoot
-
+### ML implemented Neural Network
+LSTM
